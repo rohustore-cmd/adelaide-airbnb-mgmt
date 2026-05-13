@@ -1,36 +1,81 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Adelaide Airbnb Management Website
+
+Production-ready Next.js website for an Adelaide-based Airbnb and short-term rental management company.
+
+## Tech Stack
+
+- **Framework:** Next.js 16 (App Router)
+- **Styling:** Tailwind CSS v4
+- **Database:** Supabase
+- **Deployment:** Vercel
 
 ## Getting Started
 
-First, run the development server:
+### 1. Install dependencies
+
+```bash
+npm install
+```
+
+### 2. Configure environment variables
+
+Copy `.env.local.example` to `.env.local` and fill in your Supabase credentials:
+
+```bash
+cp .env.local.example .env.local
+```
+
+Edit `.env.local` with values from your Supabase dashboard (Settings → API).
+
+### 3. Set up Supabase
+
+In the Supabase SQL Editor, run the schema found in `supabase/schema.sql`. This creates:
+- `blog_posts` table with RLS policies and 3 seed posts
+- `contact_leads` table with RLS policies
+
+### 4. Run the development server
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Project Structure
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```
+src/
+├── app/
+│   ├── page.tsx              # Home page
+│   ├── about/page.tsx
+│   ├── services/page.tsx
+│   ├── how-it-works/page.tsx
+│   ├── blog/page.tsx         # Blog index
+│   ├── blog/[slug]/page.tsx  # Blog post
+│   ├── contact/page.tsx      # Contact + ContactForm.tsx
+│   ├── privacy-policy/page.tsx
+│   ├── api/contact/route.ts  # Contact form API endpoint
+│   ├── sitemap.ts
+│   └── robots.ts
+├── components/
+│   ├── ui/                   # Navbar, Footer, Button
+│   └── sections/             # Page section components
+├── lib/supabase/
+│   ├── server.ts             # Server-side client
+│   └── client.ts             # Client-side client
+└── types/index.ts
+```
 
-## Learn More
+## Deployment to Vercel
 
-To learn more about Next.js, take a look at the following resources:
+1. Push to GitHub
+2. Import the repo at [vercel.com](https://vercel.com)
+3. Add the three environment variables from `.env.local` in Vercel project settings
+4. Click Deploy
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Post-Deployment Checklist
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- [ ] Replace `yourdomain.com.au` in `sitemap.ts`, `robots.ts`, all page metadata, and `layout.tsx` JSON-LD
+- [ ] Add your real phone number to `layout.tsx` JSON-LD schema
+- [ ] Set a custom `.com.au` domain in Vercel project settings
+- [ ] (Optional) Set up n8n workflow for contact lead email alerts

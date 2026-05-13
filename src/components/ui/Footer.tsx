@@ -41,7 +41,9 @@ export default function Footer() {
             {/* Social icons */}
             <div className="mt-6 flex gap-4">
               <a
-                href="#"
+                href="https://www.facebook.com/share/18a7UdA323/"
+                target="_blank"
+                rel="noopener noreferrer"
                 aria-label="Facebook"
                 className="text-gray-400 hover:text-brand-gold transition-colors"
               >

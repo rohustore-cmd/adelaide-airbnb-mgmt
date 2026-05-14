@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   title: "Services | Adelaide Airbnb Management",
   description:
     "Full-service Airbnb management in Adelaide — dynamic pricing, professional cleaning, linen management, guest communication, owner dashboard, and maintenance coordination.",
-  alternates: { canonical: "https://yourdomain.com.au/services" },
+  alternates: { canonical: "https://www.adelaidebnb.au/services" },
 };
 
 const included = [

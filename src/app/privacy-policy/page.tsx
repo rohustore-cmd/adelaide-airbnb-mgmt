@@ -79,10 +79,10 @@ export default function PrivacyPolicyPage() {
             <p>
               If you have questions about this Privacy Policy, please contact us at:{" "}
               <a
-                href="mailto:hello@yourdomain.com.au"
+                href="mailto:hello@adelaidebnb.au"
                 className="text-brand-gold hover:underline"
               >
-                hello@yourdomain.com.au
+                hello@adelaidebnb.au
               </a>
             </p>
           </section>

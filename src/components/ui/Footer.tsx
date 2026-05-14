@@ -50,7 +50,9 @@ export default function Footer() {
                 <Share2 size={20} />
               </a>
               <a
-                href="#"
+                href="https://www.instagram.com/bnb_managers_adelaide/"
+                target="_blank"
+                rel="noopener noreferrer"
                 aria-label="Instagram"
                 className="text-gray-400 hover:text-brand-gold transition-colors"
               >

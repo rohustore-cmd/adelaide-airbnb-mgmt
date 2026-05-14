@@ -15,7 +15,7 @@ export const metadata: Metadata = {
   description:
     "Adelaide's leading Airbnb management company. We handle cleaning, linen, dynamic pricing & guest communication. Full owner transparency. Get a free estimate today.",
   alternates: {
-    canonical: "https://yourdomain.com.au",
+    canonical: "https://www.adelaidebnb.au",
   },
 };
 

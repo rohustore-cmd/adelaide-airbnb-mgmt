@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   title: "About Us | Adelaide Airbnb Management",
   description:
     "Meet the Adelaide team behind the city's most trusted Airbnb management company. Local expertise, full transparency, and a genuine passion for maximising your property's potential.",
-  alternates: { canonical: "https://yourdomain.com.au/about" },
+  alternates: { canonical: "https://www.adelaidebnb.au/about" },
 };
 
 const values = [

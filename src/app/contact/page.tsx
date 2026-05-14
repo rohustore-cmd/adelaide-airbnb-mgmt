@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   title: "Get a Free Estimate | Adelaide Airbnb Management",
   description:
     "Find out what your Adelaide property could earn under professional management. Free, no-obligation income estimate. Contact our team today.",
-  alternates: { canonical: "https://yourdomain.com.au/contact" },
+  alternates: { canonical: "https://www.adelaidebnb.au/contact" },
 };
 
 export default function ContactPage() {

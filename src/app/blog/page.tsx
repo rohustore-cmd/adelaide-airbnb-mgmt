@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   title: "Blog | Adelaide Airbnb Management",
   description:
     "Expert insights on Airbnb management, short-term rental strategy, and property investing in Adelaide, South Australia.",
-  alternates: { canonical: "https://yourdomain.com.au/blog" },
+  alternates: { canonical: "https://www.adelaidebnb.au/blog" },
 };
 
 function estimateReadTime(content: string): number {

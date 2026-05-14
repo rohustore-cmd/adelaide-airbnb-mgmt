@@ -50,7 +50,7 @@ const jsonLd = {
     addressRegion: "SA",
     addressCountry: "AU",
   },
-  url: "https://yourdomain.com.au",
+  url: "https://www.adelaidebnb.au",
   telephone: "+61-XXX-XXX-XXX",
   description:
     "Professional Airbnb and short-term rental management in Adelaide, South Australia.",

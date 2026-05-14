@@ -41,7 +41,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       title: post.title,
       description: post.excerpt,
       alternates: {
-        canonical: `https://yourdomain.com.au/blog/${post.slug}`,
+        canonical: `https://www.adelaidebnb.au/blog/${post.slug}`,
       },
       openGraph: {
         title: post.title,

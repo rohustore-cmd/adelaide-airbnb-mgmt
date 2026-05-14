@@ -9,6 +9,6 @@ export default function robots(): MetadataRoute.Robots {
         disallow: ["/api/", "/privacy-policy"],
       },
     ],
-    sitemap: "https://yourdomain.com.au/sitemap.xml",
+    sitemap: "https://www.adelaidebnb.au/sitemap.xml",
   };
 }

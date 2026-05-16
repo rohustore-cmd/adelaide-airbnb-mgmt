@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import ContactForm from "./ContactForm";
-import { MapPin, Phone, Clock } from "lucide-react";
+import { MapPin, Mail, Clock } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Get a Free Estimate | Adelaide Airbnb Management",
@@ -53,11 +53,13 @@ export default function ContactPage() {
 
                   <div className="flex items-start gap-4">
                     <div className="w-10 h-10 rounded-lg bg-brand-navy/5 flex items-center justify-center flex-shrink-0">
-                      <Phone className="w-5 h-5 text-brand-navy" />
+                      <Mail className="w-5 h-5 text-brand-navy" />
                     </div>
                     <div>
-                      <p className="font-semibold text-brand-navy text-sm">Phone</p>
-                      <p className="text-brand-slate text-sm mt-1">+61 (0)4XX XXX XXX</p>
+                      <p className="font-semibold text-brand-navy text-sm">Email</p>
+                      <a href="mailto:gh@adelaidebnb.au" className="text-brand-slate text-sm mt-1 hover:text-brand-navy transition-colors block mt-1">
+                        gh@adelaidebnb.au
+                      </a>
                     </div>
                   </div>
 

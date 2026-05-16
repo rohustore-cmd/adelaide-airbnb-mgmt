@@ -36,7 +36,7 @@ export default function Footer() {
             </p>
             <div className="mt-4 text-sm text-gray-400">
               <p>Adelaide, SA 5000, Australia</p>
-              <p className="mt-1">ABN: XX XXX XXX XXX</p>
+              <p className="mt-1">ABN: 85 691 937 069</p>
             </div>
             {/* Social icons */}
             <div className="mt-6 flex gap-4">

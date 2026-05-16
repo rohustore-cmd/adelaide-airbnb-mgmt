@@ -79,7 +79,7 @@ export default function AboutPage() {
                   a cleaning network that consistently earns 5-star reviews.
                 </p>
                 <p>
-                  Today we manage 200+ properties across greater Adelaide, from Glenelg to the
+                  Today we manage 50+ properties across greater Adelaide, from Glenelg to the
                   Adelaide Hills, and we&apos;re proud of every single one.
                 </p>
               </div>
@@ -93,7 +93,7 @@ export default function AboutPage() {
             {/* Stats panel */}
             <div className="grid grid-cols-2 gap-6">
               {[
-                { value: "200+", label: "Properties managed across Adelaide" },
+                { value: "50+", label: "Properties managed across Adelaide" },
                 { value: "34%", label: "Average revenue uplift for new owners" },
                 { value: "4.9★", label: "Average owner satisfaction rating" },
                 { value: "48h", label: "Average onboarding time from sign-up" },

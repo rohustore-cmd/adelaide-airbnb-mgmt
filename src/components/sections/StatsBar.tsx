@@ -1,6 +1,6 @@
 const stats = [
   { value: "34%", label: "Average Revenue Increase", sublabel: "vs fixed-rate pricing" },
-  { value: "200+", label: "Properties Managed", sublabel: "across greater Adelaide" },
+  { value: "50+", label: "Properties Managed", sublabel: "across greater Adelaide" },
   { value: "4.9★", label: "Owner Satisfaction", sublabel: "based on owner reviews" },
 ];
 

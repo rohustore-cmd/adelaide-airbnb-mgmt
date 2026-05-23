@@ -70,7 +70,7 @@ export default function ContactForm() {
         </h2>
         <p className="text-brand-slate max-w-md">
           One of our local Adelaide property managers will review your details and reach out
-          within 24 hours with a personalised income estimate.
+          within 48 business hours with a personalised income estimate.
         </p>
         <Button
           onClick={() => setStatus("idle")}

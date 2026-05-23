@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, FormEvent } from "react";
+import { useState, FormEvent, useRef } from "react";
 import Button from "@/components/ui/Button";
 import { CheckCircle, AlertCircle } from "lucide-react";
 
@@ -26,6 +26,10 @@ export default function ContactForm() {
   const [form, setForm] = useState<FormData>(initialState);
   const [status, setStatus] = useState<"idle" | "submitting" | "success" | "error">("idle");
   const [errorMsg, setErrorMsg] = useState("");
+  // Honeypot field value — must stay empty for real users
+  const [honeypot, setHoneypot] = useState("");
+  // Track when the form was rendered so we can check submission timing
+  const loadedAt = useRef<number>(Date.now());
 
   function handleChange(
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
@@ -35,6 +39,10 @@ export default function ContactForm() {
 
   async function handleSubmit(e: FormEvent) {
     e.preventDefault();
+
+    // Client-side honeypot check — bail silently so bots get no feedback
+    if (honeypot) return;
+
     setStatus("submitting");
     setErrorMsg("");
 
@@ -42,7 +50,11 @@ export default function ContactForm() {
       const res = await fetch("/api/contact", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(form),
+        body: JSON.stringify({
+          ...form,
+          _hp: honeypot,
+          _t: loadedAt.current,
+        }),
       });
 
       if (!res.ok) {
@@ -86,6 +98,26 @@ export default function ContactForm() {
 
   return (
     <form onSubmit={handleSubmit} className="space-y-6" noValidate>
+      {/*
+        Honeypot: visually hidden, never filled by real users.
+        CSS hides it — not display:none, so basic bots still see it in the DOM.
+      */}
+      <div
+        aria-hidden="true"
+        style={{ position: "absolute", left: "-9999px", width: "1px", height: "1px", overflow: "hidden" }}
+      >
+        <label htmlFor="website">Leave this blank</label>
+        <input
+          id="website"
+          name="website"
+          type="text"
+          tabIndex={-1}
+          autoComplete="off"
+          value={honeypot}
+          onChange={(e) => setHoneypot(e.target.value)}
+        />
+      </div>
+
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
         <div>
           <label htmlFor="name" className="block text-sm font-semibold text-brand-navy mb-2">

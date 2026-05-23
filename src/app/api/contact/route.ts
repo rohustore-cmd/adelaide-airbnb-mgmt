@@ -1,10 +1,23 @@
 import { NextRequest, NextResponse } from "next/server";
 import { createClient } from "@supabase/supabase-js";
 
+const MIN_ELAPSED_MS = 3000; // real users take at least 3 seconds
+
 export async function POST(req: NextRequest) {
   try {
     const body = await req.json();
-    const { name, email, phone, suburb, bedrooms, message } = body;
+    const { name, email, phone, suburb, bedrooms, message, _hp, _t } = body;
+
+    // Honeypot: reject if the hidden field was filled
+    if (_hp) {
+      return NextResponse.json({ success: true }, { status: 200 });
+    }
+
+    // Timing check: reject if submitted too fast (bot behaviour)
+    const elapsed = Date.now() - Number(_t);
+    if (!_t || elapsed < MIN_ELAPSED_MS) {
+      return NextResponse.json({ success: true }, { status: 200 });
+    }
 
     if (!name?.trim() || !email?.trim()) {
       return NextResponse.json(

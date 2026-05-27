@@ -16,8 +16,8 @@ const faqs = [
     a: "Most properties are live within 48–72 hours of signing. We handle photography, listing setup, and pricing configuration before going live.",
   },
   {
-    q: "Are there any lock-in contracts?",
-    a: "No. We operate on a month-to-month basis. If you decide to pause or sell, you can exit with 30 days notice.",
+    q: "Can I have multiple properties listed on Airbnb?",
+    a: "Yes, absolutely. We manage portfolios of multiple properties for many of our Adelaide owners. Each property gets its own optimised listing, dynamic pricing strategy, and dedicated cleaning schedule. There's no limit to how many properties we can manage for you — in fact, owners with multiple properties often see the biggest efficiency gains.",
   },
   {
     q: "How do I get paid?",

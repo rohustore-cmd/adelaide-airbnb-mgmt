@@ -1,5 +1,6 @@
 import { MetadataRoute } from "next";
 import { createClient } from "@supabase/supabase-js";
+import { suburbs } from "@/lib/suburbs";
 
 const BASE_URL = "https://www.adelaidebnb.au";
 
@@ -38,5 +39,12 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     // Supabase not configured
   }
 
-  return [...staticRoutes, ...blogRoutes];
+  const suburbRoutes: MetadataRoute.Sitemap = suburbs.map((s) => ({
+    url: `${BASE_URL}/airbnb-management-${s.slug}`,
+    lastModified: new Date(),
+    changeFrequency: "monthly" as const,
+    priority: 0.85,
+  }));
+
+  return [...staticRoutes, ...suburbRoutes, ...blogRoutes];
 }

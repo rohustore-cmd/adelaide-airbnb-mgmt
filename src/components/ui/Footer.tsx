@@ -8,16 +8,22 @@ const footerLinks = [
       { label: "About Us", href: "/about" },
       { label: "Services", href: "/services" },
       { label: "How It Works", href: "/how-it-works" },
-    ],
-  },
-  {
-    heading: "Resources",
-    links: [
       { label: "Blog", href: "/blog" },
       { label: "Free Estimate", href: "/contact" },
       { label: "Privacy Policy", href: "/privacy-policy" },
     ],
   },
+];
+
+const serviceAreas = [
+  { label: "Glenelg", href: "/airbnb-management-glenelg" },
+  { label: "Norwood", href: "/airbnb-management-norwood" },
+  { label: "Adelaide CBD", href: "/airbnb-management-adelaide-cbd" },
+  { label: "North Adelaide", href: "/airbnb-management-north-adelaide" },
+  { label: "Unley", href: "/airbnb-management-unley" },
+  { label: "Prospect", href: "/airbnb-management-prospect" },
+  { label: "Henley Beach", href: "/airbnb-management-henley-beach" },
+  { label: "Adelaide Hills", href: "/airbnb-management-adelaide-hills" },
 ];
 
 export default function Footer() {
@@ -26,11 +32,11 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-10">
           {/* Brand */}
-          <div className="md:col-span-2">
+          <div className="md:col-span-1">
             <span className="font-display text-2xl font-bold">
               Adelaide<span className="text-brand-gold">BnB</span>
             </span>
-            <p className="mt-4 text-sm text-gray-300 leading-relaxed max-w-sm">
+            <p className="mt-4 text-sm text-gray-300 leading-relaxed">
               Adelaide&apos;s most trusted Airbnb and short-term rental management company.
               We handle everything so you earn more without lifting a finger.
             </p>
@@ -68,7 +74,7 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Links */}
+          {/* Company links */}
           {footerLinks.map((col) => (
             <div key={col.heading}>
               <h3 className="text-sm font-semibold uppercase tracking-wider text-brand-gold mb-4">
@@ -88,6 +94,25 @@ export default function Footer() {
               </ul>
             </div>
           ))}
+
+          {/* Service areas — important for local SEO */}
+          <div className="md:col-span-2">
+            <h3 className="text-sm font-semibold uppercase tracking-wider text-brand-gold mb-4">
+              Service Areas
+            </h3>
+            <ul className="grid grid-cols-2 gap-x-4 gap-y-3">
+              {serviceAreas.map((area) => (
+                <li key={area.href}>
+                  <Link
+                    href={area.href}
+                    className="text-sm text-gray-300 hover:text-white transition-colors"
+                  >
+                    {area.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
         </div>
 
         <div className="mt-12 pt-8 border-t border-white/10 text-center text-xs text-gray-500">

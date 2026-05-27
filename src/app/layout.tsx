@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Playfair_Display, DM_Sans } from "next/font/google";
 import Script from "next/script";
+import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
 import Navbar from "@/components/ui/Navbar";
 import Footer from "@/components/ui/Footer";
@@ -80,6 +81,7 @@ export default function RootLayout({
         <Navbar />
         <main className="flex-1">{children}</main>
         <Footer />
+        <Analytics />
         <Script
           id="facebook-pixel"
           strategy="afterInteractive"

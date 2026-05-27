@@ -49,8 +49,8 @@ export default function HeroSection() {
           {/* Social proof */}
           <div className="mt-12 flex flex-wrap gap-8 text-sm text-gray-400">
             <div>
-              <span className="block text-2xl font-bold text-white">50+</span>
-              Properties Managed
+              <span className="block text-2xl font-bold text-white">Superhost</span>
+              Adelaide since 2024
             </div>
             <div>
               <span className="block text-2xl font-bold text-white">34%</span>

@@ -6,17 +6,20 @@ import Button from "@/components/ui/Button";
 import { CheckCircle, TrendingUp, Star, ArrowRight } from "lucide-react";
 import Link from "next/link";
 
+export const dynamicParams = false;
+
 interface PageProps {
-  params: Promise<{ suburb: string }>;
+  params: Promise<{ slug: string }>;
 }
 
 export async function generateStaticParams() {
-  return suburbs.map((s) => ({ suburb: s.slug }));
+  return suburbs.map((s) => ({ slug: `airbnb-management-${s.slug}` }));
 }
 
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
-  const { suburb: slug } = await params;
-  const suburb = getSuburb(slug);
+  const { slug } = await params;
+  const suburbSlug = slug.replace("airbnb-management-", "");
+  const suburb = getSuburb(suburbSlug);
   if (!suburb) return {};
 
   return {
@@ -33,8 +36,9 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 }
 
 export default async function SuburbPage({ params }: PageProps) {
-  const { suburb: slug } = await params;
-  const suburb = getSuburb(slug);
+  const { slug } = await params;
+  const suburbSlug = slug.replace("airbnb-management-", "");
+  const suburb = getSuburb(suburbSlug);
   if (!suburb) notFound();
 
   const localBusinessSchema = {
@@ -120,9 +124,7 @@ export default async function SuburbPage({ params }: PageProps) {
               <p className="font-display text-3xl font-bold text-brand-navy">
                 {suburb.avgEarnings}
               </p>
-              <p className="text-sm text-brand-slate mt-2">
-                Estimated annual earnings
-              </p>
+              <p className="text-sm text-brand-slate mt-2">Estimated annual earnings</p>
             </div>
             <div className="bg-white rounded-2xl p-8 border border-gray-100">
               <Star className="w-8 h-8 text-brand-gold mx-auto mb-3" />

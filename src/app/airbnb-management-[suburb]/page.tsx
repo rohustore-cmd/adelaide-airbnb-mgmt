@@ -3,7 +3,7 @@ import { notFound } from "next/navigation";
 import { suburbs, getSuburb } from "@/lib/suburbs";
 import CTABanner from "@/components/sections/CTABanner";
 import Button from "@/components/ui/Button";
-import { CheckCircle, TrendingUp, Star } from "lucide-react";
+import { CheckCircle, TrendingUp, Star, ArrowRight } from "lucide-react";
 import Link from "next/link";
 
 interface PageProps {
@@ -23,7 +23,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     title: `Airbnb Management ${suburb.name} | Adelaide BnB Management`,
     description: `Professional Airbnb and short-term rental management in ${suburb.name}, Adelaide. We handle cleaning, pricing, and guest communication. Get a free income estimate.`,
     alternates: {
-      canonical: `https://www.adelaidebnb.au/airbnb-management-${suburb.slug}`,
+      canonical: `https://adelaidebnb.au/airbnb-management-${suburb.slug}`,
     },
     openGraph: {
       title: `Airbnb Management ${suburb.name} | Adelaide BnB Management`,
@@ -42,7 +42,7 @@ export default async function SuburbPage({ params }: PageProps) {
     "@type": "LocalBusiness",
     name: `Adelaide BnB Management — ${suburb.name}`,
     description: `Professional Airbnb and short-term rental management in ${suburb.name}, Adelaide SA.`,
-    url: `https://www.adelaidebnb.au/airbnb-management-${suburb.slug}`,
+    url: `https://adelaidebnb.au/airbnb-management-${suburb.slug}`,
     email: "gh@adelaidebnb.au",
     areaServed: {
       "@type": "Place",
@@ -92,6 +92,22 @@ export default async function SuburbPage({ params }: PageProps) {
               How It Works
             </Button>
           </div>
+        </div>
+      </section>
+
+      {/* Market Summary */}
+      <section className="bg-brand-gold/10 border-y border-brand-gold/30 py-8">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center gap-6 sm:gap-10">
+          <p className="text-brand-navy text-base sm:text-lg font-medium leading-relaxed flex-1">
+            <span className="font-bold text-brand-gold uppercase tracking-wide text-xs block mb-1">
+              {suburb.name} Market Insight
+            </span>
+            {suburb.marketSummary}
+          </p>
+          <Button href="/contact" size="md" variant="gold" className="whitespace-nowrap flex-shrink-0">
+            Get My Free Estimate
+            <ArrowRight className="w-4 h-4 ml-2 inline-block" />
+          </Button>
         </div>
       </section>
 
@@ -178,6 +194,35 @@ export default async function SuburbPage({ params }: PageProps) {
                 </Button>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Get Estimate CTA */}
+      <section className="py-16 bg-brand-navy">
+        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <span className="text-sm font-semibold uppercase tracking-widest text-brand-gold">
+            Free, No-Obligation
+          </span>
+          <h2 className="font-display text-3xl sm:text-4xl font-bold text-white mt-3 mb-4">
+            How Much Could Your {suburb.name} Property Earn?
+          </h2>
+          <p className="text-gray-300 mb-8 text-lg">
+            Get a personalised income estimate for your {suburb.name} property — we&apos;ll show
+            you exactly what it could earn on Airbnb with professional management.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Button href="/contact" size="lg" variant="gold">
+              Get My Free {suburb.name} Estimate
+            </Button>
+            <Button
+              href="/how-it-works"
+              size="lg"
+              variant="secondary"
+              className="border-white/40 text-white hover:bg-white hover:text-brand-navy"
+            >
+              How It Works
+            </Button>
           </div>
         </div>
       </section>

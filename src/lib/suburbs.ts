@@ -1,6 +1,7 @@
 export interface Suburb {
   slug: string;
   name: string;
+  marketSummary: string;
   description: string;
   propertyTypes: string;
   avgEarnings: string;
@@ -12,6 +13,8 @@ export const suburbs: Suburb[] = [
   {
     slug: "glenelg",
     name: "Glenelg",
+    marketSummary:
+      "Adelaide's top-performing beach suburb — Glenelg delivers the highest short-term rental yields in South Australia thanks to year-round beach demand and a prime location on Moseley Square.",
     description:
       "Glenelg is Adelaide's most popular beachside suburb and one of the highest-performing short-term rental locations in South Australia. With Moseley Square, the tram to the CBD, and year-round beach demand, properties here command premium nightly rates.",
     propertyTypes: "beachside apartments, holiday houses, and units",
@@ -27,6 +30,8 @@ export const suburbs: Suburb[] = [
   {
     slug: "norwood",
     name: "Norwood",
+    marketSummary:
+      "One of Adelaide's most consistent short-term rental markets — Norwood draws a steady mix of corporate and leisure guests with its café-lined Parade strip just 3 km from the CBD.",
     description:
       "Norwood sits just 3km from the Adelaide CBD and offers the perfect blend of café culture, boutique shopping on The Parade, and easy city access. It consistently attracts business travellers, families visiting for events, and interstate visitors.",
     propertyTypes: "character cottages, townhouses, and apartments",
@@ -42,6 +47,8 @@ export const suburbs: Suburb[] = [
   {
     slug: "adelaide-cbd",
     name: "Adelaide CBD",
+    marketSummary:
+      "The CBD is Adelaide's events epicentre — properties here see massive nightly-rate spikes during the Adelaide 500, WOMADelaide, and the Fringe alongside a robust year-round corporate travel market.",
     description:
       "The Adelaide CBD is the heart of South Australia's events calendar — home to the Adelaide Oval, Rundle Mall, and the Adelaide Convention Centre. Properties here see strong year-round demand and significant rate spikes during the Adelaide 500, WOMADelaide, and the Fringe.",
     propertyTypes: "city apartments, serviced apartments, and penthouses",
@@ -57,6 +64,8 @@ export const suburbs: Suburb[] = [
   {
     slug: "north-adelaide",
     name: "North Adelaide",
+    marketSummary:
+      "North Adelaide's heritage streetscapes and O'Connell Street dining precinct attract a premium guest demographic — couples and interstate visitors willing to pay top rates for a prestige Adelaide stay.",
     description:
       "North Adelaide is one of the city's most prestigious suburbs — leafy streets, heritage homes, and a short walk to O'Connell Street's restaurant strip. It's a favourite with interstate visitors and couples looking for a luxury Adelaide stay.",
     propertyTypes: "heritage homes, luxury apartments, and character villas",
@@ -72,6 +81,8 @@ export const suburbs: Suburb[] = [
   {
     slug: "unley",
     name: "Unley",
+    marketSummary:
+      "Unley's tree-lined streets and King William Road café strip deliver strong long-stay occupancy — families and professionals relocating to Adelaide consistently choose this inner-south suburb over city hotels.",
     description:
       "Unley's tree-lined streets, King William Road café strip, and proximity to the CBD make it one of Adelaide's most desirable short-term rental locations. Properties here attract long-stay guests, families, and professionals relocating to Adelaide.",
     propertyTypes: "period homes, garden apartments, and family houses",
@@ -87,6 +98,8 @@ export const suburbs: Suburb[] = [
   {
     slug: "prospect",
     name: "Prospect",
+    marketSummary:
+      "Prospect is Adelaide's fastest-rising Airbnb suburb — its artisan café scene and beautifully renovated heritage homes command premium nightly rates from a style-conscious, city-adjacent guest market.",
     description:
       "Prospect has rapidly emerged as one of Adelaide's trendiest suburbs — Prospect Road's café scene, artisan shops, and beautiful heritage architecture attract a young professional demographic that values style and location.",
     propertyTypes: "renovated heritage homes, cottages, and townhouses",
@@ -102,6 +115,8 @@ export const suburbs: Suburb[] = [
   {
     slug: "semaphore",
     name: "Semaphore",
+    marketSummary:
+      "Semaphore's relaxed esplanade lifestyle and growing holiday market offer investors a lower-competition coastal alternative to Glenelg, with strong summer and school-holiday bookings.",
     description:
       "Semaphore offers a relaxed, retro beachside vibe that has made it increasingly popular with holiday makers seeking an alternative to Glenelg. The esplanade, markets, and family-friendly beach attract strong summer bookings.",
     propertyTypes: "beachside cottages, holiday units, and family homes",
@@ -117,6 +132,8 @@ export const suburbs: Suburb[] = [
   {
     slug: "burnside",
     name: "Burnside",
+    marketSummary:
+      "Burnside's spacious executive homes and prestigious address attract high-spending guests — families and corporate travellers who prioritise privacy and comfort and pay accordingly.",
     description:
       "Burnside is one of Adelaide's most affluent eastern suburbs, offering spacious homes, excellent schools, and a tranquil environment close to the CBD. It attracts premium guests — families, executives, and long-stay visitors.",
     propertyTypes: "luxury family homes, executive properties, and large villas",
@@ -132,6 +149,8 @@ export const suburbs: Suburb[] = [
   {
     slug: "henley-beach",
     name: "Henley Beach",
+    marketSummary:
+      "Henley Beach is Adelaide's most underrated coastal Airbnb market — consistent year-round demand, less saturation than Glenelg, and a charming Henley Square precinct that guests keep returning to.",
     description:
       "Henley Beach is Adelaide's hidden gem for Airbnb investors — a relaxed beach suburb with the famous Henley Square, boutique dining, and consistent demand from families and couples escaping the city.",
     propertyTypes: "beach houses, holiday units, and coastal apartments",
@@ -147,6 +166,8 @@ export const suburbs: Suburb[] = [
   {
     slug: "adelaide-hills",
     name: "Adelaide Hills",
+    marketSummary:
+      "The Adelaide Hills is a unique cool-climate escape market where cellar-door tourism and weekend retreat demand push nightly rates well above city averages, especially through autumn and winter.",
     description:
       "The Adelaide Hills offers a unique short-term rental opportunity — cool climate retreats, cellar doors, and stunning natural scenery attract guests seeking a weekend escape from the city. Properties here command premium rates especially in autumn and winter.",
     propertyTypes: "rural retreats, cottages, and luxury escapes",

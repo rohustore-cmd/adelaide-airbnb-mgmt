@@ -11,11 +11,11 @@ import { createClient } from "@/lib/supabase/server";
 import { BlogPost } from "@/types";
 
 export const metadata: Metadata = {
-  title: "Airbnb Management Adelaide | Stress-Free Short-Term Rental Management",
+  title: "BnB Manager | Airbnb Management Adelaide",
   description:
     "Adelaide's leading Airbnb management company. We handle cleaning, linen, dynamic pricing & guest communication. Full owner transparency. Get a free estimate today.",
   alternates: {
-    canonical: "https://www.adelaidebnb.au",
+    canonical: "https://www.bnbmanager.com.au",
   },
 };
 

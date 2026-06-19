@@ -34,7 +34,7 @@ export default function Footer() {
           {/* Brand */}
           <div className="md:col-span-1">
             <span className="font-display text-2xl font-bold">
-              Adelaide<span className="text-brand-gold">BnB</span>
+              BnB<span className="text-brand-gold">Manager</span>
             </span>
             <p className="mt-4 text-sm text-gray-300 leading-relaxed">
               Adelaide&apos;s most trusted Airbnb and short-term rental management company.
@@ -117,7 +117,7 @@ export default function Footer() {
 
         <div className="mt-12 pt-8 border-t border-white/10 text-center text-xs text-gray-500">
           <p>
-            &copy; {new Date().getFullYear()} Adelaide Airbnb Management. All rights reserved.
+            &copy; {new Date().getFullYear()} BnB Manager. All rights reserved.
           </p>
         </div>
       </div>

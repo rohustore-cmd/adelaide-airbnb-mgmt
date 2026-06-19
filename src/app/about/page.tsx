@@ -4,10 +4,10 @@ import CTABanner from "@/components/sections/CTABanner";
 import { Users, Shield, BarChart3, Heart } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "About Us | Adelaide Airbnb Management",
+  title: "About Us | BnB Manager",
   description:
     "Meet the Adelaide team behind the city's most trusted Airbnb management company. Local expertise, full transparency, and a genuine passion for maximising your property's potential.",
-  alternates: { canonical: "https://www.adelaidebnb.au/about" },
+  alternates: { canonical: "https://www.bnbmanager.com.au/about" },
 };
 
 const values = [

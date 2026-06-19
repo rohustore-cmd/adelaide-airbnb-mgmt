@@ -23,13 +23,13 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   if (!suburb) return {};
 
   return {
-    title: `Airbnb Management ${suburb.name} | Adelaide BnB Management`,
+    title: `Airbnb Management ${suburb.name} | BnB Manager`,
     description: `Professional Airbnb and short-term rental management in ${suburb.name}, Adelaide. We handle cleaning, pricing, and guest communication. Get a free income estimate.`,
     alternates: {
-      canonical: `https://adelaidebnb.au/airbnb-management-${suburb.slug}`,
+      canonical: `https://www.bnbmanager.com.au/airbnb-management-${suburb.slug}`,
     },
     openGraph: {
-      title: `Airbnb Management ${suburb.name} | Adelaide BnB Management`,
+      title: `Airbnb Management ${suburb.name} | BnB Manager`,
       description: `Earn more from your ${suburb.name} property with professional Airbnb management. Dynamic pricing, professional cleaning, full owner transparency.`,
     },
   };
@@ -44,9 +44,9 @@ export default async function SuburbPage({ params }: PageProps) {
   const localBusinessSchema = {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
-    name: `Adelaide BnB Management — ${suburb.name}`,
+    name: `BnB Manager — ${suburb.name}`,
     description: `Professional Airbnb and short-term rental management in ${suburb.name}, Adelaide SA.`,
-    url: `https://adelaidebnb.au/airbnb-management-${suburb.slug}`,
+    url: `https://www.bnbmanager.com.au/airbnb-management-${suburb.slug}`,
     email: "gh@adelaidebnb.au",
     areaServed: {
       "@type": "Place",

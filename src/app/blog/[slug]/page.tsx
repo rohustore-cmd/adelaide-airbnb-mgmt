@@ -41,7 +41,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       title: post.title,
       description: post.excerpt,
       alternates: {
-        canonical: `https://www.adelaidebnb.au/blog/${post.slug}`,
+        canonical: `https://www.bnbmanager.com.au/blog/${post.slug}`,
       },
       openGraph: {
         title: post.title,
@@ -101,7 +101,7 @@ export default async function BlogPostPage({ params }: PageProps) {
     dateModified: post.updated_at,
     publisher: {
       "@type": "Organization",
-      name: "Adelaide Airbnb Management",
+      name: "BnB Manager",
     },
   };
 

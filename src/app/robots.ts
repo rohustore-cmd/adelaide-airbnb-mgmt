@@ -9,6 +9,6 @@ export default function robots(): MetadataRoute.Robots {
         disallow: ["/api/", "/privacy-policy"],
       },
     ],
-    sitemap: "https://www.adelaidebnb.au/sitemap.xml",
+    sitemap: "https://www.bnbmanager.com.au/sitemap.xml",
   };
 }

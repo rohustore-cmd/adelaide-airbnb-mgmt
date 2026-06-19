@@ -4,10 +4,10 @@ import CTABanner from "@/components/sections/CTABanner";
 import { CheckCircle } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Services | Adelaide Airbnb Management",
+  title: "Services | BnB Manager",
   description:
     "Full-service Airbnb management in Adelaide — dynamic pricing, professional cleaning, linen management, guest communication, owner dashboard, and maintenance coordination.",
-  alternates: { canonical: "https://www.adelaidebnb.au/services" },
+  alternates: { canonical: "https://www.bnbmanager.com.au/services" },
 };
 
 const included = [

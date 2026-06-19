@@ -5,10 +5,10 @@ import { BlogPost } from "@/types";
 import { Clock, ArrowRight } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Blog | Adelaide Airbnb Management",
+  title: "Blog | BnB Manager",
   description:
     "Expert insights on Airbnb management, short-term rental strategy, and property investing in Adelaide, South Australia.",
-  alternates: { canonical: "https://www.adelaidebnb.au/blog" },
+  alternates: { canonical: "https://www.bnbmanager.com.au/blog" },
 };
 
 function estimateReadTime(content: string): number {

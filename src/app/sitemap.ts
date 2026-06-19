@@ -2,7 +2,7 @@ import { MetadataRoute } from "next";
 import { createClient } from "@supabase/supabase-js";
 import { suburbs } from "@/lib/suburbs";
 
-const BASE_URL = "https://www.adelaidebnb.au";
+const BASE_URL = "https://www.bnbmanager.com.au";
 
 const staticRoutes: MetadataRoute.Sitemap = [
   { url: BASE_URL, lastModified: new Date(), changeFrequency: "weekly", priority: 1 },

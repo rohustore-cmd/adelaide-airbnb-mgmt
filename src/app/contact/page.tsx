@@ -3,10 +3,10 @@ import ContactForm from "./ContactForm";
 import { MapPin, Mail, Clock } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Get a Free Estimate | Adelaide Airbnb Management",
+  title: "Get a Free Estimate | BnB Manager",
   description:
     "Find out what your Adelaide property could earn under professional management. Free, no-obligation income estimate. Contact our team today.",
-  alternates: { canonical: "https://www.adelaidebnb.au/contact" },
+  alternates: { canonical: "https://www.bnbmanager.com.au/contact" },
 };
 
 export default function ContactPage() {

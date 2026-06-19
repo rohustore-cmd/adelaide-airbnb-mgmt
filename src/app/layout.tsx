@@ -20,8 +20,8 @@ const dmSans = DM_Sans({
 
 export const metadata: Metadata = {
   title: {
-    default: "Airbnb Management Adelaide | Stress-Free Short-Term Rental Management",
-    template: "%s | Adelaide Airbnb Management",
+    default: "BnB Manager | Airbnb Management Adelaide",
+    template: "%s | BnB Manager",
   },
   description:
     "Adelaide's leading Airbnb management company. We handle cleaning, linen, dynamic pricing & guest communication. Full owner transparency. Get a free estimate today.",
@@ -34,7 +34,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_AU",
-    siteName: "Adelaide Airbnb Management",
+    siteName: "BnB Manager",
   },
   robots: {
     index: true,
@@ -48,14 +48,14 @@ export const metadata: Metadata = {
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
-  name: "Adelaide Airbnb Management",
+  name: "BnB Manager",
   address: {
     "@type": "PostalAddress",
     addressLocality: "Adelaide",
     addressRegion: "SA",
     addressCountry: "AU",
   },
-  url: "https://www.adelaidebnb.au",
+  url: "https://www.bnbmanager.com.au",
   email: "gh@adelaidebnb.au",
   description:
     "Professional Airbnb and short-term rental management in Adelaide, South Australia.",

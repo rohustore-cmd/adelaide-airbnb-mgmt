@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Privacy Policy | Adelaide Airbnb Management",
-  description: "Privacy policy for Adelaide Airbnb Management.",
+  title: "Privacy Policy | BnB Manager",
+  description: "Privacy policy for BnB Manager.",
   robots: { index: false, follow: false },
 };
 

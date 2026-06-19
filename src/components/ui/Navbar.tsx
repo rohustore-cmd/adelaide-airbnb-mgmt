@@ -21,10 +21,10 @@ export default function Navbar() {
         {/* Logo */}
         <Link href="/" className="flex items-center gap-2">
           <span className="font-display text-xl font-bold text-brand-navy">
-            Adelaide<span className="text-brand-gold">BnB</span>
+            BnB<span className="text-brand-gold">Manager</span>
           </span>
           <span className="hidden sm:block text-xs text-brand-slate font-sans font-medium tracking-wide">
-            Property Management
+            Adelaide · Property Management
           </span>
         </Link>
 

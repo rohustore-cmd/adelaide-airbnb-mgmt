@@ -4,10 +4,10 @@ import OwnerDashboardTeaser from "@/components/sections/OwnerDashboardTeaser";
 import CTABanner from "@/components/sections/CTABanner";
 
 export const metadata: Metadata = {
-  title: "How It Works | Adelaide Airbnb Management",
+  title: "How It Works | BnB Manager",
   description:
     "Three simple steps to professional Airbnb management in Adelaide. Free property assessment, seamless setup, then sit back and earn. No lock-in contracts.",
-  alternates: { canonical: "https://www.adelaidebnb.au/how-it-works" },
+  alternates: { canonical: "https://www.bnbmanager.com.au/how-it-works" },
 };
 
 const faqs = [

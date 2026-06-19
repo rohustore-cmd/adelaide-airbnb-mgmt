@@ -33,7 +33,7 @@ export default function BlogPreview({ posts }: BlogPreviewProps) {
               Latest Insights
             </span>
             <h2 className="font-display text-3xl sm:text-4xl font-bold text-brand-navy mt-3">
-              From the Adelaide Property Blog
+              From the BnB Manager Blog
             </h2>
           </div>
           <Button href="/blog" variant="secondary" size="sm">

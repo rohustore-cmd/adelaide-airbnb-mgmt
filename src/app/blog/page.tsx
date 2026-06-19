@@ -43,7 +43,7 @@ export default async function BlogPage() {
       <section className="bg-brand-navy py-24 text-white text-center">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
           <h1 className="font-display text-4xl sm:text-5xl font-bold mb-4">
-            The Adelaide Property Blog
+            The BnB Manager Blog
           </h1>
           <p className="text-gray-300 text-lg">
             Expert guides on short-term rental strategy, dynamic pricing, and making the most
